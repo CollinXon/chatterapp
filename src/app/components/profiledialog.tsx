@@ -62,7 +62,7 @@ const ProfileDialog = () => {
             Edit profile
           </Dialog.Title>
           <Dialog.Description className="text-mauve11 mt-[10px] mb-5 text-[15px] leading-normal">
-            Make changes to your profile here. Click save when you're done.
+            Make changes to your profile here. Click save when you&aposre done.
           </Dialog.Description>
 
           <fieldset className="mb-10 flex flex-col place-items-center">
@@ -76,7 +76,7 @@ const ProfileDialog = () => {
                 width={0}
                 height={0}
         
-                style={{ width: '100%', height: '100%' }} 
+                style={{ width: "100%", height: "100%" }} 
                 className="rounded-full object-cover"
               />
             </div>

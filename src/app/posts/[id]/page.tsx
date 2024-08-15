@@ -23,39 +23,39 @@ export default function PostDetails() {
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const getPostDetails = async () => {
-    if (!id) return;
-
-    setLoading(true);
-
-    try {
-      const docRef = doc(db, "posts", id as string);
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        setPost({
-          id: docSnap.id,
-          AuthorId: data.AuthorId,
-          dateCreatedAt: data.dateCreatedAt.toDate(),
-          description: data.description,
-          title: data.title,
-          username: data.username,
-          photo: data.photo,
-          imageUrl: data.imageUrl || "",
-        });
-      } else {
-        console.log("No such document!");
-      }
-    } catch (error) {
-      console.error("Error fetching post details:", error);
-    }
-
-    setLoading(false);
-  };
-
+  
   useEffect(() => {
-    getPostDetails();
+    const getPostDetails = async () => {
+      if (!id) return;
+  
+      setLoading(true);
+  
+      try {
+        const docRef = doc(db, "posts", id as string);
+        const docSnap = await getDoc(docRef);
+  
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          setPost({
+            id: docSnap.id,
+            AuthorId: data.AuthorId,
+            dateCreatedAt: data.dateCreatedAt.toDate(),
+            description: data.description,
+            title: data.title,
+            username: data.username,
+            photo: data.photo,
+            imageUrl: data.imageUrl || "",
+          });
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching post details:", error);
+      }
+  
+      setLoading(false);
+    };
+  
   }, [id]);
 
   if (loading) return <div className="loader"></div>;

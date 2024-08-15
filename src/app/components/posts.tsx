@@ -23,6 +23,9 @@ export default function Post() {
 
   const postRef = collection(db, "posts");
 
+
+  useEffect(() => {
+   
   const getPosts = async () => {
     setLoading(true);
     const data = await getDocs(postRef);
@@ -38,10 +41,7 @@ export default function Post() {
       )
     );
   };
-
-  useEffect(() => {
-    getPosts();
-  }, [getPosts]);
+  }, []);
 
   return (
     <div className="ml-6">
