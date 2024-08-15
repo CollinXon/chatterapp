@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { db } from "@/app/utils/config/firebase";
 import { doc, getDoc } from "firebase/firestore";
+import Image from "next/image";
 
 interface Post {
   id: string;
@@ -69,7 +70,7 @@ export default function PostDetails() {
         <div>{post.username}</div>
       </div>
       <div>{post.description}</div>
-      {post.imageUrl && <img src={post.imageUrl} alt="post image" />}
+      {post.imageUrl && <Image src={post.imageUrl} alt="post image" width={250} height={250} />}
       <div>
         {post.dateCreatedAt.toLocaleDateString("en-US", {
           month: "short",

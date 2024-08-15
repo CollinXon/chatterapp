@@ -9,6 +9,7 @@ import { db, auth, storage } from "@/app/utils/config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/navigation";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import Image from "next/image";
 
 interface Data {
   title: string;
@@ -97,10 +98,12 @@ const PostForm = () => {
           />
           {imagePreview && (
             <div className="mt-4">
-              <img
+              <Image
                 src={imagePreview}
                 alt="Image Preview"
-                className="w-24 h-24 object-cover"
+                width={24}
+                height={24}
+                className="object-cover"
               />
             </div>
           )}

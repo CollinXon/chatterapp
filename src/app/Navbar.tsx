@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { auth } from "./utils/config/firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
-import { HomeIcon, Pencil2Icon } from "@radix-ui/react-icons";
+import { Pencil2Icon } from "@radix-ui/react-icons";
 
 
 

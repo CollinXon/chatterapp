@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { db } from "../utils/config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
-import ScrollingNews from "./sidebar";
+import Image from "next/image";
 
 interface Post {
   id: string;
@@ -41,7 +41,7 @@ export default function Post() {
 
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [getPosts]);
 
   return (
     <div className="ml-6">
@@ -79,10 +79,12 @@ export default function Post() {
                 </div>
 
                 {post.imageUrl && (
-                  <img
+                  <Image
                     src={post.imageUrl}
                     alt="post-image"
-                    className=" w-40 h-28  rounded-md"
+                    width={40}
+                    height={28}
+                    className="   rounded-md"
                   />
                 )}
               </div>

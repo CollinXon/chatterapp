@@ -6,6 +6,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState, ChangeEvent, useEffect } from "react";
 import { updateProfile } from "firebase/auth";
+import Image from "next/image";
 
 const ProfileDialog = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -66,13 +67,17 @@ const ProfileDialog = () => {
 
           <fieldset className="mb-10 flex flex-col place-items-center">
             <div className="h-32 w-32 rounded-full bg-black mb-5">
-              <img
+              <Image
                 src={
                   photoURL ||
                   "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
                 }
                 alt="avatar"
-                className="rounded-full object-cover h-full w-full"
+                width={0}
+                height={0}
+        
+                style={{ width: '100%', height: '100%' }} 
+                className="rounded-full object-cover"
               />
             </div>
             <p className="font-semibold">{user?.displayName}</p>
