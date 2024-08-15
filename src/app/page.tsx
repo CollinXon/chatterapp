@@ -8,9 +8,16 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { DataInputs } from "./signup/page";
 import Link from "next/link";
 import Image from "next/image";
+
+
+
+interface DataInput {
+  email: string;
+  password: string;
+  
+}
 
 const schema = yup.object().shape({
   email: yup
@@ -34,7 +41,7 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<DataInputs>({ resolver: yupResolver(schema) });
+  } = useForm< DataInput>({ resolver: yupResolver(schema) });
 
   const handleGoogleSignIn = async () => {
     try {
@@ -46,7 +53,7 @@ const Login = () => {
     }
   };
 
-  const handleEmailLogin = async (data: DataInputs) => {
+  const handleEmailLogin = async (data:  DataInput) => {
     try {
       const UserCredential = await signInWithEmailAndPassword(
         auth,
