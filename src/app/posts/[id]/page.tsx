@@ -66,7 +66,7 @@ export default function PostDetails() {
     <div className="ml-6">
       <h1 className="font-semibold text-2xl mb-2">{post.title}</h1>
       <div className="flex items-center gap-2 mb-2">
-        <img src={post.photo} alt="avatar" className="w-8 h-8 rounded-full" />
+        <Image src={post.photo} alt="avatar" width={8} height={8} className="rounded-full" />
         <div>{post.username}</div>
       </div>
       <div>{post.description}</div>

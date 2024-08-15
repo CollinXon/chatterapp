@@ -53,10 +53,12 @@ export default function Post() {
           <div key={post.id} className=" mb-6 space-y-2 pb-4 sm:w-10/12">
             <Link href={`/posts/${post.id}`}>
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   src={post.photo}
                   alt="avatar"
-                  className="w-10 h-10 rounded-full"
+                  width={10}
+                  height={10}
+                  className="rounded-full"
                 />
                 <div>
                   <div className="text-sm">{post.username}</div>
