@@ -130,7 +130,7 @@ const Login = () => {
       </div>
 
       <div className="text-center">
-        <p> Don't have an account?</p>
+        <p> Do not have an account?</p>
 
         <Link href="/signup" className="text-blue-800 ">
           Create account
