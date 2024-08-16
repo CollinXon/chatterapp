@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { db } from "../utils/config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
-import { auth } from "../utils/config/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useRouter } from "next/navigation";
+
+
+
 
 interface Post {
   id: string;
@@ -22,12 +22,6 @@ interface Post {
 export default function Post() {
   const [postList, setPostList] = useState<Post[] | null>(null);
   const [loading, setLoading] = useState(false);
-  const [user] = useAuthState(auth);
-
-
-  const router = useRouter();
-
-  [user && router.push("/posts")];
 
   const postRef = collection(db, "posts");
 
