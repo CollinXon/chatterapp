@@ -54,7 +54,7 @@ const Signup = () => {
         data.password
       );
       console.log(UserCredential);
-      router.push("/login");
+      router.push("/");
     } catch (error) {
       setError("Something went wrong");
     }

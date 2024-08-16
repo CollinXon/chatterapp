@@ -86,7 +86,7 @@ const PostForm = () => {
           <textarea
             placeholder="Type Content Here"
             {...register("description")}
-            className="textarea-field"
+            className="textarea-field  w-11/12 h-fit"
           />
           <p className="text-red-500">{errors.description?.message}</p>
 
