@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { auth, provider } from "./utils/config/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -32,10 +31,9 @@ const schema = yup.object().shape({
 
 const Login = () => {
   const [error, setError] = useState<string | null>(null);
-  const [user] = useAuthState(auth);
-  const router = useRouter();
+ const router = useRouter();
 
-  [user && router.push("/posts")];
+ 
 
   const {
     register,
