@@ -62,22 +62,19 @@ const ProfileDialog = () => {
             Edit profile
           </Dialog.Title>
           <Dialog.Description className="text-mauve11 mt-[10px] mb-5 text-[15px] leading-normal">
-            Make changes to your profile here. Click save when you&aposre done.
+            Make changes to your profile here. Click save when you're done.
           </Dialog.Description>
 
           <fieldset className="mb-10 flex flex-col place-items-center">
             <div className="h-32 w-32 rounded-full bg-black mb-5">
-              <Image
+              <img
                 src={
                   photoURL ||
                   "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
                 }
                 alt="avatar"
-                width={0}
-                height={0}
-        
-                style={{ width: "100%", height: "100%" }} 
-                className="rounded-full object-cover"
+                
+                className="w-full h-full rounded-full object-cover"
               />
             </div>
             <p className="font-semibold">{user?.displayName}</p>

@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import * as Dialog from "@radix-ui/react-dialog";
 import ProfileDialog from "./profiledialog";
-import Image from "next/image";
+
 
 export default function Profile() {
   const router = useRouter();
@@ -31,15 +31,14 @@ export default function Profile() {
           <>
             <div className="place-items-center mt-[-10px]">
               <div className="flex justify-center">
-                <Image
+                <img
                   src={
                     user?.photoURL ||
                     "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
                   }
-                  width={12}
-                  height={12}
+                  
                   alt="Avatar"
-                  className=" mt-2 rounded-full "
+                  className=" w-12 h-12 mt-2 rounded-full "
                 />
               </div>
               <div className="font-bold text-[8px] sm:text-[12px] text-white">

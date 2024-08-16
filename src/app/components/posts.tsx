@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { db } from "../utils/config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
-import Image from "next/image";
+
 
 interface Post {
   id: string;
@@ -23,9 +23,6 @@ export default function Post() {
 
   const postRef = collection(db, "posts");
 
-
-  useEffect(() => {
-   
   const getPosts = async () => {
     setLoading(true);
     const data = await getDocs(postRef);
@@ -41,6 +38,11 @@ export default function Post() {
       )
     );
   };
+
+  useEffect(() => {
+   
+    getPosts()
+  
   }, []);
 
   return (
@@ -53,12 +55,11 @@ export default function Post() {
           <div key={post.id} className=" mb-6 space-y-2 pb-4 sm:w-10/12">
             <Link href={`/posts/${post.id}`}>
               <div className="flex items-center gap-4">
-                <Image
+                <img
                   src={post.photo}
                   alt="avatar"
-                  width={10}
-                  height={10}
-                  className="rounded-full"
+                
+                  className="rounded-full w-10 h-10"
                 />
                 <div>
                   <div className="text-sm">{post.username}</div>
@@ -81,12 +82,11 @@ export default function Post() {
                 </div>
 
                 {post.imageUrl && (
-                  <Image
+                  <img
                     src={post.imageUrl}
                     alt="post-image"
-                    width={40}
-                    height={28}
-                    className="   rounded-md"
+              
+                    className=" w-40 h-28 rounded-md"
                   />
                 )}
               </div>
