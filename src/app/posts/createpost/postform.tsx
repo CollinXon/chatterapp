@@ -67,26 +67,40 @@ const PostForm = () => {
   };
 
   return (
-    <div>
+    <div className="bg-slate-900  justify-center">
       {loading ? (
         <div className="loader"></div>
       ) : (
+        
         <form
           onSubmit={handleSubmit(handleCreatePost)}
-          className="mt-36 lg:mt-20 flex flex-col justify-center place-items-center gap-6 border-solid border-2 border-blue-600 bg-slate-800 w-9/12 ml-12 sm:ml-20 lg:ml-48 sm:w-10/12 lg:w-7/12 h-auto items-center p-4"
+          className="flex flex-col justify-center place-items-center gap-6  bg-slate-800 w-10/12 sm:w-10/12 lg:w-10/12 h-auto  items-center text-white p-4 ml-10 sm:ml-20"
         >
+
+            
+        {imagePreview && (
+          <div className=" flex justify-center">
+            <img
+              src={imagePreview}
+              alt="Image Preview"
+            
+              className="w-11/12 h-1/2 object-cover"
+            />
+          </div>
+        )}
+        
           <input
-            type="text"
+            type="text" 
             placeholder="Title..."
             {...register("title")}
-            className="input-field"
+            className="input-field bg-gray-700 p-2 md:p-4 w-7/12"
           />
           <p className="text-red-500">{errors.title?.message}</p>
 
           <textarea
             placeholder="Type Content Here"
             {...register("description")}
-            className="textarea-field  w-11/12 h-fit"
+            className="textarea-field  w-11/12 bg-gray-700 p-4 h-[250px]"
           />
           <p className="text-red-500">{errors.description?.message}</p>
 
@@ -96,22 +110,16 @@ const PostForm = () => {
             onChange={handleImageChange}
             className="file-input"
           />
-          {imagePreview && (
-            <div className="mt-4">
-              <img
-                src={imagePreview}
-                alt="Image Preview"
-              
-                className="w-24 h-24 object-cover"
-              />
-            </div>
-          )}
+          
+          
 
-          <input type="submit" className="text-white mt-4" />
+          <button type="submit" className="text-white mt-8 bg-red-500 p-2 px-8 rounded-md" > Post </button>
         </form>
       )}
     </div>
+   
   );
+  
 };
 
 export default PostForm;

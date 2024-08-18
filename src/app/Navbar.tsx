@@ -22,7 +22,7 @@ return (
     <div >
 <nav className=" block sm:hidden">
 
-<Link href="/posts/createpost"><Pencil2Icon className="h-8 w-8 absolute top-[30px] left-60 text-white"/></Link>
+<Link href="/posts/createpost"><Pencil2Icon className="h-8 w-8 absolute top-[25px] left-48 text-white"/></Link>
 
 
 

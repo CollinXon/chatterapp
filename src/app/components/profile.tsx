@@ -55,10 +55,10 @@ export default function Profile() {
                 <Dialog.Content
                   className="data-[state=open] bg-black opacity-[0.9] text-white 
         border-solid border-2 border-black border-r-0 
-       h-24 w-24 absolute top-[65px] left-[320px] sm:left-[675px] lg:left-[1135px]"
+       h-24 w-24 absolute top-[65px] left-[310px]  sm:left-[525px] lg:left-[1135px] "
                 >
                   <Dialog.Description className=" ">
-                    <fieldset className="text-nowrap text-right">
+                    <fieldset className="text-nowrap">
                       <ProfileDialog />
                     </fieldset>
 

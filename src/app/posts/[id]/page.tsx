@@ -69,7 +69,7 @@ export default function PostDetails() {
        <div className="flex justify-center">
       {post.imageUrl && <img src={post.imageUrl} alt="post image" className="  w-11/12   " />}
       </div>
-      <div className="ml-24 sm:ml-80">
+      <div className="p-2 sm:p-20 leading-8">
       <h1 className="font-semibold text-2xl sm:text-5xl mb-2">{post.title}</h1>
       <div className="flex items-center  gap-2  mt-10">
         <img src={post.photo} alt="avatar"  className="h-12 w-12 rounded-full" />
@@ -79,7 +79,7 @@ export default function PostDetails() {
       </div>
       
       </div>
-      <div className="mt-2 ml-32">
+      <div className=" ml-32">
         {post.dateCreatedAt.toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
