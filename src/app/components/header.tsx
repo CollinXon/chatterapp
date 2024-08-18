@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className=" flex place-items-center  gap-4 w-full h-20 bg-black ">
+    <div className=" inline-flex flex-shrink-0 flex-grow-0 place-items-center  gap-4 w-full h-20 bg-black space-x-0   ">
       <Link href="/posts" title="Home">
         <Image
           src="/Logotypes.svg"

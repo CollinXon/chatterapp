@@ -54,7 +54,7 @@ export default function Post() {
         <div className="loader"></div>
       ) : (
         postList?.map((post) => (
-          <div key={post.id} className=" mb-6 space-y-2 pb-4 sm:w-10/12 md:p-10">
+          <div key={post.id} className=" mb-6 space-y-2 pb-4  sm:w-10/12 md:p-10">
             <Link href={`/posts/${post.id}`}>
               <div className="flex items-center gap-4">
                 <img

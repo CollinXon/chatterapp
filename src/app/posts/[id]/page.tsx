@@ -75,16 +75,17 @@ export default function PostDetails() {
         <img src={post.photo} alt="avatar"  className="h-12 w-12 rounded-full" />
         <div className="">{post.username}</div>
         <div>
-          
-      </div>
-      
-      </div>
-      <div className=" ml-32">
+        <div className=" ml-6 font-medium">
         {post.dateCreatedAt.toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
         })}
         </div>
+          
+      </div>
+      
+      </div>
+     
       <div className="mt-12">{post.description}</div>
       </div>
       

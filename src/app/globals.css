@@ -24,8 +24,8 @@ body{background-color:whitesmoke;}
 
 
 .loader {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 
     margin-left: 170px;
 
@@ -85,12 +85,7 @@ body{background-color:whitesmoke;}
 
   @media (min-width:780px) {
     .loader{
-        height: 200px;
-
-        width:200px;
-
-       
-        
+         
         margin-left: 500px;}
   
 

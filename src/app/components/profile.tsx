@@ -26,10 +26,10 @@ export default function Profile() {
 
   return (
     <div>
-      <nav className="flex justify-end place-items-center gap-4 sm:gap-10 mt-[-65px] sm:mr-8 ">
+      <nav className="flex justify-end place-items-center gap-8 sm:gap-10 mt-[-65px]  pr-6 ">
         {user && (
           <>
-            <div className="place-items-center mt-[-10px]">
+            <div className="place-items-center   ">
               <div className="flex justify-center">
                 <img
                   src={
@@ -38,24 +38,24 @@ export default function Profile() {
                   }
                   
                   alt="Avatar"
-                  className=" w-12 h-12 mt-2 rounded-full "
+                  className="w-11 h-11 md:w-12 md:h-12 mt-2 md:mt-[-5px] rounded-full "
                 />
               </div>
               <div className="font-bold text-[8px] sm:text-[12px] text-white">
                 {user?.displayName}
               </div>
             </div>
-
+                  <div className="">
             <Dialog.Root>
               <Dialog.Trigger>
-                <DotsHorizontalIcon className=" w-7 h-7 bg-white rounded-full mt-[-8px]" />
+                <DotsHorizontalIcon className=" w-7 h-7 bg-white rounded-full mt-[-8px] " />
               </Dialog.Trigger>
               <Dialog.Portal>
                 <Dialog.Overlay className="data-[state=open]" />
                 <Dialog.Content
                   className="data-[state=open] bg-black opacity-[0.9] text-white 
         border-solid border-2 border-black border-r-0 
-       h-24 w-24 absolute top-[65px] left-[310px]  sm:left-[525px] lg:left-[1135px] "
+       h-24 w-24 ml-[-30px] sm:ml-0 absolute top-[65px] left-[310px]  sm:left-[525px] lg:left-[1135px]  flex flex-shrink-0 flex-grow-0 "
                 >
                   <Dialog.Description className=" ">
                     <fieldset className="text-nowrap">
@@ -70,6 +70,7 @@ export default function Profile() {
                 </Dialog.Content>
               </Dialog.Portal>
             </Dialog.Root>
+            </div>
           </>
         )}
       </nav>

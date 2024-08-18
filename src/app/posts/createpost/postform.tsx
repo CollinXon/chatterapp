@@ -93,14 +93,14 @@ const PostForm = () => {
             type="text" 
             placeholder="Title..."
             {...register("title")}
-            className="input-field bg-gray-700 p-2 md:p-4 w-7/12"
+            className="input-field bg-gray-700 p-2 md:p-4 w-7/12 focus:outline-none"
           />
           <p className="text-red-500">{errors.title?.message}</p>
 
           <textarea
             placeholder="Type Content Here"
             {...register("description")}
-            className="textarea-field  w-11/12 bg-gray-700 p-4 h-[250px]"
+            className="textarea-field  w-11/12 bg-gray-700 p-4 h-[250px] focus:outline-none"
           />
           <p className="text-red-500">{errors.description?.message}</p>
 
@@ -108,12 +108,12 @@ const PostForm = () => {
             type="file"
             accept="image/*"
             onChange={handleImageChange}
-            className="file-input"
+            className="ml-24 sm:ml-0 "
           />
           
           
 
-          <button type="submit" className="text-white mt-8 bg-red-500 p-2 px-8 rounded-md" > Post </button>
+          <button type="submit" className="text-white mt-8 bg-red-500 p-2 px-8 rounded-md ]" > Post </button>
         </form>
       )}
     </div>
