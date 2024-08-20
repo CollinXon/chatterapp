@@ -3,12 +3,12 @@ import ScrollingNews from "../components/sidebar";
 
 const HomePost = () => {
   return (
-    <div className="flex p-6">
+    <div className="   ">
       <Post />
 
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
       <ScrollingNews />
-      </div>
+      </div> */}
     </div>
   );
 };

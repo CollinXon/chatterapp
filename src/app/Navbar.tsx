@@ -20,9 +20,9 @@ const NavBar = () => {
 return (
 
     <div >
-<nav className=" block sm:hidden">
+<nav className=" block  sm:hidden">
 
-<Link href="/posts/createpost"><Pencil2Icon className="h-6 w-6 absolute top-[30px] left-44 text-white"/></Link>
+<Link href="/posts/createpost" title="Create Post"><Pencil2Icon className="h-9 w-9 absolute top-28 right-0 text-slate-900"/></Link>
 
 
 

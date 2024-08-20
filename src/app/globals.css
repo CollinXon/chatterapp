@@ -7,18 +7,6 @@
 body{background-color:whitesmoke;}
 
 
-@keyframes scroll {
-  0% {
-    transform: translateY(100%); /* Start from the bottom off-screen */
-  }
-  100% {
-    transform: translateY(-100%); /* End at the top off-screen */
-  }
-}
-
-.animate-scroll {
-  animation: scroll 10s linear infinite; /* Adjust the duration as needed */
-}
 
 
 

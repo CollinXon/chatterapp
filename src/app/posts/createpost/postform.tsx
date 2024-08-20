@@ -67,14 +67,14 @@ const PostForm = () => {
   };
 
   return (
-    <div className="bg-slate-900  justify-center">
+    <div className="bg-slate-900  flex justify-center w-screen overflow-x-hidden">
       {loading ? (
         <div className="loader"></div>
       ) : (
         
         <form
           onSubmit={handleSubmit(handleCreatePost)}
-          className="flex flex-col justify-center place-items-center gap-6  bg-slate-800 w-10/12 sm:w-10/12 lg:w-10/12 h-auto  items-center text-white p-4 ml-10 sm:ml-20"
+          className="flex flex-col  place-items-center  gap-6  bg-slate-800 w-10/12 sm:w-10/12 lg:w-10/12 max-w-full items-center text-white p-4  "
         >
 
             

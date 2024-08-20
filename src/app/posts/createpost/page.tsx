@@ -2,9 +2,10 @@ import PostForm from "./postform";
 
 const CreatePost = () => {
   return (
-    <div>
+    <div className="">
       <PostForm />
-    </div>
+      </div>
+    
   );
 };
 

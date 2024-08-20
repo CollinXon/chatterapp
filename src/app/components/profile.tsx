@@ -25,12 +25,11 @@ export default function Profile() {
   };
 
   return (
-    <div>
-      <nav className="flex justify-end place-items-center gap-8 sm:gap-10 mt-[-65px]  pr-6 ">
+      <nav className="flex justify-end place-items-center gap-8 sm:gap-10 mt-[-65px]  ">
         {user && (
           <>
-            <div className="place-items-center   ">
-              <div className="flex justify-center">
+            <div className="flex flex-col place-items-center absolute left-56 sm:left-[1040px] top-4 sm:top-4  ">
+              <div className="flex justify-center ">
                 <img
                   src={
                     user?.photoURL ||
@@ -38,14 +37,14 @@ export default function Profile() {
                   }
                   
                   alt="Avatar"
-                  className="w-11 h-11 md:w-12 md:h-12 mt-2 md:mt-[-5px] rounded-full "
+                  className="flex w-10 h-10 md:w-12 md:h-12 mt-2 md:mt-[-5px] rounded-full "
                 />
               </div>
-              <div className="font-bold text-[8px] sm:text-[12px] text-white">
+              <div className="font-bold text-[6px] sm:text-[12px] text-white">
                 {user?.displayName}
               </div>
             </div>
-                  <div className="">
+                  <div className="flex absolute left-80 lg:left-[1170px] top-9">
             <Dialog.Root>
               <Dialog.Trigger>
                 <DotsHorizontalIcon className=" w-7 h-7 bg-white rounded-full mt-[-8px] " />
@@ -55,10 +54,11 @@ export default function Profile() {
                 <Dialog.Content
                   className="data-[state=open] bg-black opacity-[0.9] text-white 
         border-solid border-2 border-black border-r-0 
-       h-24 w-24 ml-[-30px] sm:ml-0 absolute top-[65px] left-[310px]  sm:left-[525px] lg:left-[1135px]  flex flex-shrink-0 flex-grow-0 "
+       h-24 w-24 ml-[0px] sm:ml-0 absolute top-[65px] left-64  sm:left-[525px] lg:left-[1134px] flex flex-shrink-0 flex-grow-0 "
                 >
-                  <Dialog.Description className=" ">
-                    <fieldset className="text-nowrap">
+                  <Dialog.Title/>
+                  <Dialog.Description className="text-nowrap">
+                    <fieldset className="">
                       <ProfileDialog />
                     </fieldset>
 
@@ -74,6 +74,6 @@ export default function Profile() {
           </>
         )}
       </nav>
-    </div>
+    
   );
 }

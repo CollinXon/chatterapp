@@ -8,7 +8,7 @@ export default function PostLayout({
 }) {
   return (
     <section>
-      {<Profile />}
+      <Profile />
       <NavBar />
 
       {children}
