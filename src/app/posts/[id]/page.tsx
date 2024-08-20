@@ -65,7 +65,7 @@ export default function PostDetails() {
   if (!post) return <div className="loader"></div>;
 
   return (
-    <div className=" mt-1  space-y-10 ">
+    <div className=" mt-16  space-y-10 ">
        <div className="flex justify-center">
       {post.imageUrl && <img src={post.imageUrl} alt="post image" className="  w-11/12   " />}
       </div>

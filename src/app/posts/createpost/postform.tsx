@@ -74,7 +74,7 @@ const PostForm = () => {
         
         <form
           onSubmit={handleSubmit(handleCreatePost)}
-          className="flex flex-col  place-items-center  gap-6  bg-slate-800 w-10/12 sm:w-10/12 lg:w-10/12 max-w-full items-center text-white p-4  "
+          className="flex flex-col  place-items-center  gap-6  bg-slate-800 w-10/12 sm:w-10/12 lg:w-10/12 max-w-full items-center text-white p-4 mt-16 "
         >
 
             
