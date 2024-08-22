@@ -33,7 +33,7 @@ return (
 
 <nav className=" hidden sm:block">
 
-<Link href="/posts/createpost" title="Create Post" className="flex place-items-center gap-2  absolute top-[20px] right-72 lg:right-56 text-white"><Pencil2Icon className="h-9 w-9  "/> Write</Link>
+<Link href="/posts/createpost" title="Create Post" className="flex place-items-center gap-2  absolute top-[20px] right-72 md:right-56 text-white"><Pencil2Icon className="h-9 w-9  "/> Write</Link>
 
 
 

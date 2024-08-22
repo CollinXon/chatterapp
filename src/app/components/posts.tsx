@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { db } from "../utils/config/firebase";
+import { db,auth } from "../utils/config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
+
 
 
 
@@ -22,8 +23,7 @@ interface Post {
 export default function Post() {
   const [postList, setPostList] = useState<Post[] | null>(null);
   const [loading, setLoading] = useState(false);
-
-  const postRef = collection(db, "posts");
+ const postRef = collection(db, "posts");
 
   const getPosts = async () => {
     setLoading(true);
@@ -47,9 +47,15 @@ export default function Post() {
   
   }, []);
 
+
+  
   return (
+    
     <div className="w-full p-3  ">
-      <h1 className="mb-8 font-bold mt-6  ">For You</h1>
+
+
+
+    <h1 className="mb-8 font-bold mt-6  ">For You</h1>
       {loading ? (
         <div className="loader"></div>
       ) : (
