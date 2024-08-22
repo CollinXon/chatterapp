@@ -65,14 +65,14 @@ export default function PostDetails() {
   if (!post) return <div className="loader"></div>;
 
   return (
-    <div className=" mt-16  space-y-10 ">
+    <div className="  ">
        <div className="flex justify-center">
       {post.imageUrl && <img src={post.imageUrl} alt="post image" className="  w-11/12   " />}
       </div>
       <div className="p-2 sm:p-20 leading-8">
       <h1 className="font-semibold text-2xl sm:text-5xl mb-2">{post.title}</h1>
       <div className="flex items-center  gap-2  mt-10">
-        <img src={post.photo} alt="avatar"  className="h-12 w-12 rounded-full" />
+        <img src={post.photo} alt="avatar"  className="h-10 w-10 rounded-full" />
         <div className="">{post.username}</div>
         <div>
         <div className=" ml-6 font-medium">

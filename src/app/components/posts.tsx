@@ -49,12 +49,12 @@ export default function Post() {
 
   return (
     <div className="w-full p-3  ">
-      <h1 className="mb-8 font-bold mt-20  ">For You</h1>
+      <h1 className="mb-8 font-bold mt-6  ">For You</h1>
       {loading ? (
         <div className="loader"></div>
       ) : (
         postList?.map((post) => (
-          <div key={post.id} className=" mb-6 mt-0 sm:mt-[-20px] space-y-2 pb-4  sm:w-10/12 md:p-10">
+          <div key={post.id} className=" mb-10 sm:mb-6 mt-0 sm:mt-[-20px] space-y-2   sm:w-10/12 md:p-10">
             <Link href={`/posts/${post.id}`}>
               <div className="flex items-center gap-4">
                 <img
@@ -82,7 +82,7 @@ export default function Post() {
                     src={post.imageUrl}
                     alt="post-image"
               
-                    className=" w-8/12 h-28 rounded-md"
+                    className=" w-full h-40 rounded-md"
                   />
                 )}
                 </div>
