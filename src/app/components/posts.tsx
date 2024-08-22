@@ -76,13 +76,13 @@ export default function Post() {
 
               <div className="flex gap-28">
                 <div className="mt-6 flex flex-col">
-                <div className="flex mb-4  sm:hidden">
+                <div className="flex mb-4  lg:hidden">
                 {post.imageUrl && (
                   <img
                     src={post.imageUrl}
                     alt="post-image"
               
-                    className=" w-full h-40 rounded-md"
+                    className=" w-full h-40 sm:h-60 rounded-md"
                   />
                 )}
                 </div>
@@ -92,13 +92,13 @@ export default function Post() {
                     {/* Brief description */}
                   </div>
                 </div>
-                    <div className="hidden sm:block">
+                    <div className="hidden lg:block">
                 {post.imageUrl && (
                   <img
                     src={post.imageUrl}
                     alt="post-image"
               
-                    className=" w-40 h-28 rounded-md"
+                    className=" w-96  h-40 rounded-md"
                   />
                 )}
                 </div>
