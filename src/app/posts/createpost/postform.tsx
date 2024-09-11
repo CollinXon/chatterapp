@@ -67,14 +67,14 @@ const PostForm = () => {
   };
 
   return (
-    <div className="bg-slate-900  flex justify-center overflow-x-hidden h-fit">
+    <div className="bg-slate-900  flex justify-center overflow-x-hidden min-h-screen">
       {loading ? (
         <div className="loader"></div>
       ) : (
         
         <form
           onSubmit={handleSubmit(handleCreatePost)}
-          className="flex flex-col  place-items-center  gap-6  bg-slate-800 w-10/12 sm:w-10/12 lg:w-10/12 max-w-full items-center text-white p-4 mt-2  "
+          className="flex flex-col  place-items-center  gap-6  bg-slate-800 w-11/12 max-w-full  items-center text-white p-4 mt-12 xl:mt-6 h-full"
         >
 
             
@@ -93,7 +93,7 @@ const PostForm = () => {
             type="text" 
             placeholder="Title..."
             {...register("title")}
-            className="input-field bg-gray-700 p-2 md:p-4 w-7/12 focus:outline-none"
+            className="input-field bg-gray-700 p-2 md:p-4 w-11/12 sm:w-7/12 focus:outline-none"
           />
           <p className="text-red-500">{errors.title?.message}</p>
 

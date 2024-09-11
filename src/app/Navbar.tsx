@@ -31,7 +31,9 @@ return (
 </nav>
 
 
-<nav className=" hidden sm:block">
+<nav className=" hidden sm:block ">
+
+    <input placeholder="Search..." className="absolute top-[20px] left-48 md:left-56 xl:left-60 py-2 w-[250px] md:w-[400px] xl:w-[600px] pl-4 rounded-sm focus:outline-none  "/>
 
 <Link href="/posts/createpost" title="Create Post" className="flex place-items-center gap-2  absolute top-[20px] right-72 md:right-56 text-white"><Pencil2Icon className="h-9 w-9  "/> Write</Link>
 
