@@ -67,7 +67,7 @@ const PostForm = () => {
   };
 
   return (
-    <div className="bg-slate-900  flex justify-center overflow-x-hidden ">
+    <div className="bg-slate-900  flex justify-center overflow-x-hidden h-fit">
       {loading ? (
         <div className="loader"></div>
       ) : (

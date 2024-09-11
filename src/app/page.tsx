@@ -99,7 +99,7 @@ const Login = () => {
         </div>
         <button
           type="submit"
-          className="bg-blue-600 text-white  p-2 w-full h-12 rounded-md mb-4 sm:mb-2"
+          className="bg-blue-600 text-white  p-2 w-full h-12 rounded-md "
         >
           Log In
         </button>
@@ -128,7 +128,7 @@ const Login = () => {
       </div>
 
       <div className="text-center">
-        <p> Do not have an account?</p>
+        <p> Don&apos;t have an account?</p>
 
         <Link href="/signup" className="text-blue-800 ">
           Create account

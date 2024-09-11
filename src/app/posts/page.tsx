@@ -1,5 +1,5 @@
 import Post from "../components/posts";
-import ScrollingNews from "../components/sidebar";
+
 
 const HomePost = () => {
   return (
